@@ -1,6 +1,6 @@
 {
   "name": "wise-base-ui",
-  "version": "0.1.45",
+  "version": "0.1.46",
   "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -20,22 +20,29 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "emotion-reset": "^3.0.1",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.5.2",
+    "react-tooltip": "^4.2.21",
     "typescript": "^4.7.4",
+    "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
   "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "4.0.3"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic",
-    "build": "rollup -c"
+    "publish:npm": "rollup -c && yarn publish"
   },
   "eslintConfig": {
     "extends": [
@@ -82,6 +89,7 @@
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "@svgr/rollup": "^6.3.1",
+    "@types/react-router-dom": "^5.3.3",
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
     "rollup-plugin-dts": "^4.2.2",
