@@ -1,6 +1,6 @@
 {
   "name": "wise-base-ui",
-  "version": "0.1.30",
+  "version": "0.1.31",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -36,7 +36,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic",
-    "prepare": "rm -rf dist && mkdir dist && babel src/lib/ -d dist --copy-files"
+    "prepare": "rm -rf dist && mkdir dist && tsc"
   },
   "eslintConfig": {
     "extends": [
