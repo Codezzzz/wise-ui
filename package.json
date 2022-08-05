@@ -1,15 +1,12 @@
 {
   "name": "wise-base-ui",
-  "version": "0.1.41",
+  "version": "0.1.42",
   "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
-  "browser": "./browser/specific/main.js",
   "files": [
-    "/dist",
-    "README.md",
-    "src/lib/typing.d.ts"
+    "/dist"
   ],
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -38,7 +35,6 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic",
-    "prepare": "rm -rf dist && mkdir dist && tsc",
     "build": "rollup -c"
   },
   "eslintConfig": {
