@@ -11,11 +11,7 @@ export declare type FlexDirectionProps = {
 /** 요소들의 flex 방향을 설정한다 */
 declare function FlexDirection({ children }: FlexDirectionProps): import("@emotion/react/jsx-runtime").JSX.Element;
 declare namespace FlexDirection {
-    var defaultProps: {
-        gap: string;
-        width: string;
-    };
-    var Row: ({ children, gap, width, justifyContent, alignItems, className, }: FlexDirectionProps) => import("@emotion/react/jsx-runtime").JSX.Element;
-    var Column: ({ children, gap, width, justifyContent, alignItems, className, }: FlexDirectionProps) => import("@emotion/react/jsx-runtime").JSX.Element;
+    var Row: ({ children, gap, width, justifyContent, alignItems, className }: FlexDirectionProps) => import("@emotion/react/jsx-runtime").JSX.Element;
+    var Column: ({ children, gap, width, justifyContent, alignItems, className }: FlexDirectionProps) => import("@emotion/react/jsx-runtime").JSX.Element;
 }
 export { FlexDirection };

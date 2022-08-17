@@ -1,6 +1,33 @@
 import * as _emotion_react_jsx_runtime from '@emotion/react/jsx-runtime';
 import * as React$1 from 'react';
-import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
+import * as _emotion_styled from '@emotion/styled';
+import * as _emotion_react from '@emotion/react';
+
+declare type AvatarProps = {
+    size?: AvatarSizeType;
+    /** 아바타 이미지 */
+    url: string;
+    /** on 아이콘 visible 여부 */
+    on?: boolean;
+    /** Avatar group에 사용 되는 uniqe 값 */
+    idx?: number;
+};
+declare type AvatarSizeType = "xs" | "sm" | "md" | "lg" | "xl" | "xl2";
+declare function Avatar({ size, url, on, idx }: AvatarProps): _emotion_react_jsx_runtime.JSX.Element;
+
+declare type CheckBoxProps = {
+    backgroundColor?: string;
+    activeBorderColor?: string;
+    borderColor?: string;
+    strokeColor?: string;
+    shadow?: string;
+    isShadow?: boolean;
+    checked?: boolean;
+    children?: React.ReactNode;
+    onChange?: () => void;
+    disabled?: boolean;
+};
+declare function CheckBox({ backgroundColor, activeBorderColor, borderColor, strokeColor, shadow, isShadow, checked, children, onChange, disabled }: CheckBoxProps): _emotion_react_jsx_runtime.JSX.Element;
 
 declare type ColorVariables = {
     "25": string;
@@ -61,40 +88,6 @@ declare type FontFamilyType = {
 declare type FontFamilyKey = keyof FontFamilyType;
 
 declare const mediaQuery: (maxWidth: number) => string;
-
-interface ButtonProps extends Omit<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, "type"> {
-    /** 버튼 안의 내용 */
-    children: React.ReactNode;
-    /** 클릭했을 때 호출할 함수 */
-    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    /** 버튼의 생김새를 설정합니다. */
-    theme: "primary" | "error" | "base";
-    /** 버튼의 크기를 설정합니다 */
-    size: "small" | "medium" | "big";
-    /** 버튼을 비활성화 시킵니다. */
-    disabled?: boolean;
-    /** 버튼의 너비를 임의로 설정합니다. */
-    width?: string | number;
-    type?: "button" | "submit" | "reset";
-    icon?: React.ReactNode;
-    iconGap?: string | number;
-    iconPosition?: "left" | "right";
-    /** custom bg */
-    backgroundColor?: string;
-    /** custom color */
-    color?: string;
-    /** custom border color */
-    borderColor?: string;
-    height?: string | number;
-    fontFamily?: FontFamilyKey;
-}
-declare function Button({ children, onClick, theme, size, disabled, width, type, icon, iconGap, iconPosition, backgroundColor, color, borderColor, height, fontFamily, ...rest }: ButtonProps): _emotion_react_jsx_runtime.JSX.Element;
-declare namespace Button {
-    var defaultProps: {
-        theme: string;
-        size: string;
-    };
-}
 
 var _path$w, _defs;
 
@@ -809,25 +802,15 @@ declare const Icon: {
     };
 };
 
-declare type FlexDirectionProps = {
-    children: React.ReactNode;
-    /** 아이템과 아이템에 간격을 설정합니다. */
-    gap?: number | string;
-    width?: number | string;
-    justifyContent?: "center" | "flex-end" | "flex-start" | "end" | "space-between" | "space-around";
-    alignItems?: string;
-    className?: string;
-};
-/** 요소들의 flex 방향을 설정한다 */
-declare function FlexDirection({ children }: FlexDirectionProps): _emotion_react_jsx_runtime.JSX.Element;
-declare namespace FlexDirection {
-    var defaultProps: {
-        gap: string;
-        width: string;
-    };
-    var Row: ({ children, gap, width, justifyContent, alignItems, className, }: FlexDirectionProps) => _emotion_react_jsx_runtime.JSX.Element;
-    var Column: ({ children, gap, width, justifyContent, alignItems, className, }: FlexDirectionProps) => _emotion_react_jsx_runtime.JSX.Element;
-}
+declare const ErrorMessage: _emotion_styled.StyledComponent<{
+    theme?: _emotion_react.Theme | undefined;
+    as?: React$1.ElementType<any> | undefined;
+}, React$1.DetailedHTMLProps<React$1.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, {}>;
+
+declare const HintMessage: _emotion_styled.StyledComponent<{
+    theme?: _emotion_react.Theme | undefined;
+    as?: React$1.ElementType<any> | undefined;
+}, React$1.DetailedHTMLProps<React$1.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, {}>;
 
 declare type Theme = "light" | "dark" | "default";
 declare function useTheme(): {
@@ -861,4 +844,4 @@ declare type UseOutSideClickProps = {
  */
 declare function UseOutSideClick({ callback }: UseOutSideClickProps): React$1.MutableRefObject<null>[];
 
-export { Button, ColorKey, ColorKeys, ColorPalette, ColorVariables, FlexDirection, FontFamilyKey, FontFamilyType, Icon, icons as IconSvg, Palette, WiseProvider, buildCssVariable, colorPalette, error, fontFamily, fontSize, gray, iconTypes, mediaQuery, palette, primary, success, themes, useConfirm, useCopyToClipboard, UseOutSideClick as useOutSideClick, useTheme, warning };
+export { Avatar, CheckBox, ColorKey, ColorKeys, ColorPalette, ColorVariables, ErrorMessage, FontFamilyKey, FontFamilyType, HintMessage, Icon, icons as IconSvg, Palette, WiseProvider, buildCssVariable, colorPalette, error, fontFamily, fontSize, gray, iconTypes, mediaQuery, palette, primary, success, themes, useConfirm, useCopyToClipboard, UseOutSideClick as useOutSideClick, useTheme, warning };
